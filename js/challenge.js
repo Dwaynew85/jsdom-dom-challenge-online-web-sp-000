@@ -44,7 +44,7 @@ heart.addEventListener("click", function() {
 
 // listener for submit button
 let text;
-document.addEventListener("submit", (event) => {
+document.addEventListener("submit", function() {
   event.preventDefault();
   console.log(event);
   text = document.getElementById('comment-input')
