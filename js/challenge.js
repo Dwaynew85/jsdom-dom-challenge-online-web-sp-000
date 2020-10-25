@@ -26,7 +26,6 @@ function addCounter() {
 // there will be an event that adds the counter +1 if plus is pressed, or -1 if minus is pressed
 plus.addEventListener("click", addCounter); // listens for plus being pressed
 minus.addEventListener("click", minusCounter); // listens for minus being pressed
-pause.addEventListener("click", stopCounter);
 
 heart.addEventListener("click", function() {
   likeCount++;
