@@ -60,6 +60,11 @@ function addCounter() {
    activeButtons()
  });
 pause.addEventListener("click", function() {
-  pause.innerText = "resume"
-  deactiveButtons();
-})
+  if (pause.innerHTML === "pause") {
+    pause.innerHTML = "resume";
+    deactiveButtons();
+  }else if (pause.innerHTML === "resume") {
+    pause.innerHTML = "pause";
+  }
+  
+});
