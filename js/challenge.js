@@ -27,7 +27,6 @@ function addCounter() {
 plus.addEventListener("click", addCounter); // listens for plus being pressed
 minus.addEventListener("click", minusCounter); // listens for minus being pressed
 pause.addEventListener("click", stopCounter);
-// when the 'like' button is pressed, it shows the amount of likes for the current number listed
 
 heart.addEventListener("click", function() {
   likeCount++;
@@ -42,17 +41,12 @@ heart.addEventListener("click", function() {
     likes.appendChild(li);
   }
 });
-  // need to check each number as they run, see if they have likes, and display a message if they have likes
-  // figure out what event triggers when the h1(counter) is updated
-
-
-
 
 // listener for submit button
-// let text;
-// document.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   console.log(event);
-//   text = document.getElementById('comment-input')
-// });
-// text.value
+let text;
+document.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(event);
+  text = document.getElementById('comment-input')
+});
+text.value
