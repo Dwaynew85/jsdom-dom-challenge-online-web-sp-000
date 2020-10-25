@@ -18,6 +18,19 @@ function addCounter() {
  function stopCounter() {
    clearTimeout(count)
  }
+ function likes() {
+   likeCount++;
+   const li = document.createElement("li");
+   const node = document.createTextNode(`${counter.textContent} has been liked ${likeCount} time(s).`);
+   const likes = document.querySelector('.likes');
+   const lastLike = likes.lastChild;
+   li.appendChild(node);
+   if(likeCount>1){
+     lastLike.replaceWith(li);
+   }else {
+     likes.appendChild(li);
+   }
+ };
  document.addEventListener('DOMContentLoaded', function() { // starts counter when page loads
      setInterval(increment, 1000)
      console.log("Counter Started")
@@ -28,19 +41,8 @@ function activeButtons() {
   plus.addEventListener("click", addCounter); // listens for plus being pressed
   minus.addEventListener("click", minusCounter); // listens for minus being pressed
 
-  heart.addEventListener("click", function() {
-    likeCount++;
-    const li = document.createElement("li");
-    const node = document.createTextNode(`${counter.textContent} has been liked ${likeCount} time(s).`);
-    const likes = document.querySelector('.likes');
-    const lastLike = likes.lastChild;
-    li.appendChild(node);
-    if(likeCount>1){
-      lastLike.replaceWith(li);
-    }else {
-      likes.appendChild(li);
-    }
-  });
+  heart.addEventListener("click", likes)
+  
 
   let text;
   document.addEventListener("submit", function() {
