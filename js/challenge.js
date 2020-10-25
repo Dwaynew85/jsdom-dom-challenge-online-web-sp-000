@@ -61,7 +61,7 @@ function addCounter() {
  });
 pause.addEventListener("click", function() {
   console.log("pausing")
-  if (pause.innerHTML === "pause") {
+  if (pause.innerHTML === " pause ") {
     pause.innerHTML = "resume";
     deactiveButtons();
   }else if (pause.innerHTML === "resume") {
