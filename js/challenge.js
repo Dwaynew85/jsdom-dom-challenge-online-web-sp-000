@@ -60,5 +60,6 @@ function addCounter() {
    activeButtons()
  });
 pause.addEventListener("click", function() {
+  pause.innerText = "resume"
   deactiveButtons();
 })
