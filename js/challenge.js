@@ -54,8 +54,8 @@ function addCounter() {
  }
 
  document.addEventListener('DOMContentLoaded', function() { // starts counter when page loads
-     setInterval(increment, 1000)
-     console.log("Counter Started")
-     likeCount = 0;
-     activeButtons()
+   setInterval(increment, 1000)
+   console.log("Counter Started")
+   likeCount = 0;
+   activeButtons()
  });
