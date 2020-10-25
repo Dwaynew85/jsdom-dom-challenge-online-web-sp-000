@@ -27,7 +27,17 @@ pause.addEventListener("click", stopCounter);
 // when the 'like' button is pressed, it shows the amount of likes for the current number listed
 let likeCount = 0;
 heart.addEventListener("click", function() {
-  console.log(likeCount)
+  likeCount++;
+  const li = document.createElement("li");
+  const node = document.createTextNode(counter.textContent + " has been liked" + likeCount " time(s).");
+  const likes = document.querySelector('.likes');
+  const lastLike = likes.lastChild;
+  li.appendChild(node);
+  if(likeCount>1){
+    lastLike.replaceWith(li);
+  }else {
+    likes.appendChild(li);
+  }
 });
   // need to check each number as they run, see if they have likes, and display a message if they have likes
   // figure out what event triggers when the h1(counter) is updated
