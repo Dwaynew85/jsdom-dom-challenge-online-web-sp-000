@@ -48,10 +48,10 @@ document.addEventListener("submit", function() {
   event.preventDefault();
   // add p tag to #list div
   const list = document.getElementById('list');
-  const comment = document.getElementById('comment-input').value;
+  const comment = document.getElementById('comment-input');
   const p = document.createElement('p');
   list.appendChild(p)
   // add content of form to new #list p tag
-  p.innerHTML = comment
+  p.innerHTML = comment.value
   comment.reset
 });
