@@ -53,3 +53,4 @@ function activeButtons() {
     document.getElementById('comment-form').reset();
   });
 }
+activeButtons()
