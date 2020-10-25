@@ -42,7 +42,7 @@ function activeButtons() {
   minus.addEventListener("click", minusCounter); // listens for minus being pressed
 
   heart.addEventListener("click", likes)
-  
+
 
   let text;
   document.addEventListener("submit", function() {
