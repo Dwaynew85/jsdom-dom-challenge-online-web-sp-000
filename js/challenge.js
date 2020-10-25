@@ -53,3 +53,9 @@ function activeButtons() {
   document.addEventListener("submit", comment);
 }
 activeButtons()
+function deactiveButtons() {
+  plus.removeEventListener("click", addCounter); // listens for plus being pressed
+  minus.removeEventListener("click", minusCounter); // listens for minus being pressed
+  heart.removeEventListener("click", likes);
+  document.removeEventListener("submit", comment);
+}
