@@ -45,12 +45,10 @@ heart.addEventListener("click", function() {
 let text;
 document.addEventListener("submit", function() {
   event.preventDefault();
-  // add p tag to #list div
   const list = document.getElementById('list');
   const comment = document.getElementById('comment-input');
   const p = document.createElement('p');
-  list.appendChild(p)
-  // add content of form to new #list p tag
+  list.appendChild(p);
   p.innerHTML = comment.value;
-  document.getElementById('comment-form').reset()
+  document.getElementById('comment-form').reset();
 });
