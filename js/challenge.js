@@ -26,17 +26,9 @@ minus.addEventListener("click", minusCounter); // listens for minus being presse
 pause.addEventListener("click", stopCounter);
 // when the 'like' button is pressed, it shows the amount of likes for the current number listed
 let likeCount = 0;
-heart.addEventListener("click", (event) => {
+heart.addEventListener("click", function() {
   console.log(likeCount)
 });
-function addLike(num) {
-  const numLike_num =+ 1;
-}
-function likeCheck(num) {
-  if (likeCount >= 1) {
-
-  }
-}
   // need to check each number as they run, see if they have likes, and display a message if they have likes
   // figure out what event triggers when the h1(counter) is updated
 
