@@ -11,14 +11,15 @@ function addCounter() {
  function minusCounter() {
    counter.innerHTML = parseInt(counter.innerHTML, 10) - 1;
  }
- function startCounter() {
-   count = setInterval(addCounter, 1000)
+ function increment() {
+   addCounter();
+   likeCount = 0;
  }
  function stopCounter() {
    clearTimeout(count)
  }
  document.addEventListener('DOMContentLoaded', function() { // starts counter when page loads
-     startCounter();
+     setInterval(increment, 1000)
      console.log("Counter Started")
      likeCount = 0;
  });
