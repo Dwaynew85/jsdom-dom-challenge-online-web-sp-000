@@ -23,32 +23,33 @@ function addCounter() {
      console.log("Counter Started")
      likeCount = 0;
  });
-// there will be an event that adds the counter +1 if plus is pressed, or -1 if minus is pressed
-plus.addEventListener("click", addCounter); // listens for plus being pressed
-minus.addEventListener("click", minusCounter); // listens for minus being pressed
 
-heart.addEventListener("click", function() {
-  likeCount++;
-  const li = document.createElement("li");
-  const node = document.createTextNode(`${counter.textContent} has been liked ${likeCount} time(s).`);
-  const likes = document.querySelector('.likes');
-  const lastLike = likes.lastChild;
-  li.appendChild(node);
-  if(likeCount>1){
-    lastLike.replaceWith(li);
-  }else {
-    likes.appendChild(li);
-  }
-});
+function activeButtons() {
+  plus.addEventListener("click", addCounter); // listens for plus being pressed
+  minus.addEventListener("click", minusCounter); // listens for minus being pressed
 
-// listener for submit button
-let text;
-document.addEventListener("submit", function() {
-  event.preventDefault();
-  const list = document.getElementById('list');
-  const comment = document.getElementById('comment-input');
-  const p = document.createElement('p');
-  list.appendChild(p);
-  p.innerHTML = comment.value;
-  document.getElementById('comment-form').reset();
-});
+  heart.addEventListener("click", function() {
+    likeCount++;
+    const li = document.createElement("li");
+    const node = document.createTextNode(`${counter.textContent} has been liked ${likeCount} time(s).`);
+    const likes = document.querySelector('.likes');
+    const lastLike = likes.lastChild;
+    li.appendChild(node);
+    if(likeCount>1){
+      lastLike.replaceWith(li);
+    }else {
+      likes.appendChild(li);
+    }
+  });
+
+  let text;
+  document.addEventListener("submit", function() {
+    event.preventDefault();
+    const list = document.getElementById('list');
+    const comment = document.getElementById('comment-input');
+    const p = document.createElement('p');
+    list.appendChild(p);
+    p.innerHTML = comment.value;
+    document.getElementById('comment-form').reset();
+  });
+}
