@@ -65,6 +65,6 @@ pause.addEventListener("click", function() {
     pause.innerHTML = "resume";
     deactiveButtons();
   }else if (pause.innerHTML === "resume") {
-    pause.innerHTML = "pause";
+    pause.innerHTML = " pause ";
   }
 });
