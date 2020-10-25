@@ -53,4 +53,5 @@ document.addEventListener("submit", function() {
   list.appendChild(p)
   // add content of form to new #list p tag
   p.innerHTML = comment
+  comment.reset
 });
