@@ -60,5 +60,5 @@ function addCounter() {
    activeButtons()
  });
 pause.addEventListener("click", function() {
-  deactiveButtons;
+  deactiveButtons();
 })
