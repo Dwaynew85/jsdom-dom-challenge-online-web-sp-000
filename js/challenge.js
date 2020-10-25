@@ -53,17 +53,19 @@ function addCounter() {
    document.removeEventListener("submit", comment);
  }
 
- document.addEventListener('DOMContentLoaded', function() { // starts counter when page loads
+ document.addEventListener('DOMContentLoaded', begin)
+ function begin() { // starts counter when page loads
    count = setInterval(increment, 1000)
    console.log("Counter Started")
    likeCount = 0;
    activeButtons()
- });
+ };
 pause.addEventListener("click", function() {
   console.log("pausing")
   if (pause.innerHTML === " pause ") {
     pause.innerHTML = "resume";
     deactiveButtons();
+    stopCounter();
   }else if (pause.innerHTML === "resume") {
     pause.innerHTML = " pause ";
     activeButtons();
