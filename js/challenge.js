@@ -16,7 +16,7 @@ function addCounter() {
  function stopCounter() {
    clearTimeout(count)
  }
- document.addEventListener('DOMContentLoaded', (event) => { // starts counter when page loads
+ document.addEventListener('DOMContentLoaded', function() { // starts counter when page loads
      startCounter();
      console.log("Counter Started")
  });
