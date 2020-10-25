@@ -5,7 +5,7 @@ let heart = document.getElementById('heart')
 let pause = document.getElementById('pause')
 let counter = document.getElementById('counter');
 function addCounter() {
-   counter.innerHTML = parseInt(counter.innerHTML, 10)++;
+   counter.innerHTML = parseInt(counter.innerHTML, 10) + 1;
  };
  function minusCounter() {
    counter.innerHTML = parseInt(counter.innerHTML, 10) - 1;
