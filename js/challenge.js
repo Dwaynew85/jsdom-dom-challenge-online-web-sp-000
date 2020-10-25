@@ -40,22 +40,23 @@ function addCounter() {
    p.innerHTML = comment.value;
    document.getElementById('comment-form').reset();
  };
+ function activeButtons() {
+   plus.addEventListener("click", addCounter); // listens for plus being pressed
+   minus.addEventListener("click", minusCounter); // listens for minus being pressed
+   heart.addEventListener("click", likes);
+   document.addEventListener("submit", comment);
+ }
+ function deactiveButtons() {
+   plus.removeEventListener("click", addCounter); // listens for plus being pressed
+   minus.removeEventListener("click", minusCounter); // listens for minus being pressed
+   heart.removeEventListener("click", likes);
+   document.removeEventListener("submit", comment);
+ }
+ 
  document.addEventListener('DOMContentLoaded', function() { // starts counter when page loads
      setInterval(increment, 1000)
      console.log("Counter Started")
      likeCount = 0;
+     activeButtons()
  });
 
-function activeButtons() {
-  plus.addEventListener("click", addCounter); // listens for plus being pressed
-  minus.addEventListener("click", minusCounter); // listens for minus being pressed
-  heart.addEventListener("click", likes);
-  document.addEventListener("submit", comment);
-}
-activeButtons()
-function deactiveButtons() {
-  plus.removeEventListener("click", addCounter); // listens for plus being pressed
-  minus.removeEventListener("click", minusCounter); // listens for minus being pressed
-  heart.removeEventListener("click", likes);
-  document.removeEventListener("submit", comment);
-}
