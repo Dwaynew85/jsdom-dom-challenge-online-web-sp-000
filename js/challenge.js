@@ -29,7 +29,7 @@ let likeCount = 0;
 heart.addEventListener("click", function() {
   likeCount++;
   const li = document.createElement("li");
-  const node = document.createTextNode(counter.textContent + " has been liked" + likeCount " time(s).");
+  const node = document.createTextNode(`${counter.textContent} has been liked ${likeCount} time(s).`);
   const likes = document.querySelector('.likes');
   const lastLike = likes.lastChild;
   li.appendChild(node);
