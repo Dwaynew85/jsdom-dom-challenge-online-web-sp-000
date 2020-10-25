@@ -52,6 +52,5 @@ document.addEventListener("submit", function() {
   const p = document.createElement('p');
   list.appendChild(p)
   // add content of form to new #list p tag
-  p.innerHTML = comment.value
-  comment.reset
+  p.innerHTML = comment.value;
 });
