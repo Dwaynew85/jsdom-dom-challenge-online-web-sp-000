@@ -31,6 +31,15 @@ function addCounter() {
      likes.appendChild(li);
    }
  };
+ function comment() {
+   event.preventDefault();
+   const list = document.getElementById('list');
+   const comment = document.getElementById('comment-input');
+   const p = document.createElement('p');
+   list.appendChild(p);
+   p.innerHTML = comment.value;
+   document.getElementById('comment-form').reset();
+ };
  document.addEventListener('DOMContentLoaded', function() { // starts counter when page loads
      setInterval(increment, 1000)
      console.log("Counter Started")
@@ -40,15 +49,8 @@ function addCounter() {
 function activeButtons() {
   plus.addEventListener("click", addCounter); // listens for plus being pressed
   minus.addEventListener("click", minusCounter); // listens for minus being pressed
-  heart.addEventListener("click", likes)
-  document.addEventListener("submit", function() {
-    event.preventDefault();
-    const list = document.getElementById('list');
-    const comment = document.getElementById('comment-input');
-    const p = document.createElement('p');
-    list.appendChild(p);
-    p.innerHTML = comment.value;
-    document.getElementById('comment-form').reset();
-  });
+  heart.addEventListener("click", likes);
+  document.addEventListener("submit", comment);
+  
 }
 activeButtons()
