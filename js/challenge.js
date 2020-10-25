@@ -40,11 +40,7 @@ function addCounter() {
 function activeButtons() {
   plus.addEventListener("click", addCounter); // listens for plus being pressed
   minus.addEventListener("click", minusCounter); // listens for minus being pressed
-
   heart.addEventListener("click", likes)
-
-
-  let text;
   document.addEventListener("submit", function() {
     event.preventDefault();
     const list = document.getElementById('list');
