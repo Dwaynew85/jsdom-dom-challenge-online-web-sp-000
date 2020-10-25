@@ -4,6 +4,7 @@ let minus = document.getElementById('minus')
 let heart = document.getElementById('heart')
 let pause = document.getElementById('pause')
 let counter = document.getElementById('counter');
+let likeCount;
 function addCounter() {
    counter.innerHTML = parseInt(counter.innerHTML, 10) + 1;
  };
@@ -19,7 +20,7 @@ function addCounter() {
  document.addEventListener('DOMContentLoaded', function() { // starts counter when page loads
      startCounter();
      console.log("Counter Started")
-     var likeCount = 0;
+     likeCount = 0;
  });
 // there will be an event that adds the counter +1 if plus is pressed, or -1 if minus is pressed
 plus.addEventListener("click", addCounter); // listens for plus being pressed
