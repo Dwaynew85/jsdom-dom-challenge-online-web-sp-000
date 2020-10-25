@@ -66,5 +66,4 @@ pause.addEventListener("click", function() {
   }else if (pause.innerHTML === "resume") {
     pause.innerHTML = "pause";
   }
-
 });
