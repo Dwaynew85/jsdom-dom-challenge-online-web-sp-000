@@ -51,6 +51,6 @@ function activeButtons() {
   minus.addEventListener("click", minusCounter); // listens for minus being pressed
   heart.addEventListener("click", likes);
   document.addEventListener("submit", comment);
-  
+
 }
 activeButtons()
