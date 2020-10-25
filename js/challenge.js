@@ -49,4 +49,3 @@ document.addEventListener("submit", (event) => {
   console.log(event);
   text = document.getElementById('comment-input')
 });
-text.value
