@@ -60,6 +60,7 @@ function addCounter() {
    activeButtons()
  });
 pause.addEventListener("click", function() {
+  console.log("pausing")
   if (pause.innerHTML === "pause") {
     pause.innerHTML = "resume";
     deactiveButtons();
