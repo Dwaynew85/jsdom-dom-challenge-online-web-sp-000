@@ -27,7 +27,7 @@ pause.addEventListener("click", stopCounter);
 // when the 'like' button is pressed, it shows the amount of likes for the current number listed
 let likeCount = 0;
 heart.addEventListener("click", (event) => {
-
+  console.log(likeCount)
 });
 function addLike(num) {
   const numLike_num =+ 1;
